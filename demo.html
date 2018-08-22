@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>yang demo</title>
+  <link rel="stylesheet" href="/src/css/bootstrap.min.css">
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script src="/src/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    window.onload = function () {
+      var vue = new Vue({
+        el: "#yang",
+        data: {
+          msg: 123,
+          arr:[{name:'yang',age:17},{name:'zang',age:97},{name:'wang',age:107}]
+        }
+      })
+    }
+
+  </script>
+</head>
+<body>
+<div id="yang">
+  {{msg}}
+  <br>
+  <input class="text-primary" type="text" v-model="msg">
+  <br>
+  <table class="table-bordered">
+    <tr class="table-bordered ">
+      <th>账户</th>
+      <th>年龄</th>
+    </tr>
+    <tr v-for="value in arr">
+      <td>{{value.name}}</td>
+      <td>{{value.age}}</td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
