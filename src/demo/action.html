@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>yang demo</title>
+  <!--引入bootstrap的CSS，前缀不能用/-->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!--引入bootatrap必须要有jquery，前缀不能用/-->
+  <script src="../js/jquery-1.7.2.js"></script>
+  <!--引入bootatrap必须要有bootstrap，前缀不能用/-->
+  <script src="../js/bootstrap.js"></script>
+  <!--引入vue-->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script>
+    window.onload = function () {
+      new Vue({
+        el: "#yang",
+        data: {},
+        methods: {
+          show: function () {
+            alert(1);
+            //阻止默认事件
+            ev.preventDefault()
+          },
+        }
+      })
+    }
+  </script>
+
+</head>
+<body>
+<div id="yang">
+  <input type="button" @contextmenu.prevent="show()" value="按钮">
+</div>
+</body>
+</html>
