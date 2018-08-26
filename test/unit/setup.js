@@ -1,3 +1,3 @@
-import Vue from 'vue'
+import Vue from 'src/js/vue'
 
 Vue.config.productionTip = false
